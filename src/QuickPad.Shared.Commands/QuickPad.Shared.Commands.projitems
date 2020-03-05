@@ -49,7 +49,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Editing\ToggleWordWrapCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Editing\UnderlineCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Editing\UndoCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)QuickPadCommands.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SimpleCommand.cs" />
   </ItemGroup>
 </Project>

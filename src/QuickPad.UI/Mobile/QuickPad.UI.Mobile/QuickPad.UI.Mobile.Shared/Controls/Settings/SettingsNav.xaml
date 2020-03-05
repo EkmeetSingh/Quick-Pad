@@ -1,0 +1,66 @@
+﻿<UserControl
+    x:Class="QuickPad.UI.Controls.Settings.SettingsNav"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:QuickPad.UI.Controls.Settings"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    d:DesignWidth="360"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    mc:Ignorable="d">
+
+    <Grid Width="360" HorizontalAlignment="Stretch">
+        <NavigationView
+            x:Name="settingNavView"
+            Margin="0,0,0,0"
+            HorizontalAlignment="Stretch"
+            BackRequested="SettingNavView_OnBackRequested"
+            IsBackButtonVisible="Visible"
+            IsBackEnabled="True"
+            IsPaneOpen="False"
+            IsSettingsVisible="False"
+            ItemInvoked="SettingNavView_OnItemInvoked"
+            OpenPaneLength="200"
+            PaneDisplayMode="Top">
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    x:Name="GeneralItem"
+                    IsSelected="True"
+                    Tag="General">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE12A;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="Theme">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE771;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="Font">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE8D2;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="Advanced">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE74C;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="About">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE946;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+        </NavigationView>
+
+        <ScrollViewer Margin="0,40,0,0" Background="{x:Bind VtSelector.CurrentItem.BackgroundAcrylicAccent, Mode=OneWay}">
+            <Frame
+                x:Name="SettingsFrame"
+                Height="Auto"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+        </ScrollViewer>
+    </Grid>
+</UserControl>

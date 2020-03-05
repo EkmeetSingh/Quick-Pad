@@ -41,6 +41,9 @@ namespace QuickPad.Mvvm.ViewModels
             ServiceProvider.GetService<IApplication<TStorageFile, TStream>>().CurrentViewModel;
 
         [JsonIgnore]
+        public abstract ObservableCollection<IDisplayMode> AllDisplayModes { get; set; }
+
+        [JsonIgnore]
         public string CurrentMode
         {
             get => _currentMode ??= DefaultMode;
@@ -70,7 +73,9 @@ namespace QuickPad.Mvvm.ViewModels
             set => _returnToMode = value;
         }
 
-        [JsonIgnore] [NotifyOnReset] public string CurrentModeText { get; private set; }
+        [JsonIgnore] 
+        [NotifyOnReset] 
+        public string CurrentModeText { get; private set; }
 
         [JsonIgnore]
         [NotifyOnReset]
@@ -91,8 +96,7 @@ namespace QuickPad.Mvvm.ViewModels
         [JsonIgnore]
         [NotifyOnReset]
         public bool ShowMenu =>
-            CurrentMode.Equals(DisplayModes.LaunchClassicMode.ToString(),
-                StringComparison.InvariantCultureIgnoreCase) || ShowNinjaMode;
+            CurrentMode.Equals(DisplayModes.LaunchClassicMode.ToString(), StringComparison.InvariantCultureIgnoreCase) || ShowNinjaMode;
 
         [JsonIgnore]
         [NotifyOnReset]
@@ -337,5 +341,38 @@ namespace QuickPad.Mvvm.ViewModels
         [JsonIgnore]
         public Action ExitApplication { get; set; }
 
+        public abstract object DefaultTextForegroundBrush { get; set; }
+        public abstract object FlowDirection { get; set; }
+
+        [NotifyOnReset]
+        public double BackgroundTintOpacity
+        {
+            get => Model.BackgroundTintOpacity;
+            set
+            {
+                Model.BackgroundTintOpacity = value;
+                AfterTintOpacityChanged?.Invoke(value);
+            }
+        }
+
+        public abstract void NotifyThemeChanged();
+
+        public abstract object TitleMargin { get; }
+        public abstract object StatusTextColor { get; set; }
+
+        [JsonIgnore]
+        public bool ShowCompactOverlayTip { get; set; }
+
+        public abstract string VersionNumberText { get; }
+
+        public abstract string DefaultModeText { get; }
+
+        [JsonIgnore]
+        public abstract DefaultLanguageModel DefaultLanguage { get; set; }
+
+        [JsonIgnore]
+        public virtual bool IsUwp => false;
+
+        public virtual bool IsNotUwp => !IsUwp;
     }
 }

@@ -116,6 +116,12 @@ namespace QuickPad.Mvvm.Models
             set => Set(value, MethodBase.GetCurrentMethod().Name);
         }
 
+        public double BackgroundTintOpacity
+        {
+            get => Get(0.75, MethodBase.GetCurrentMethod().Name);
+            set => Set(value, MethodBase.GetCurrentMethod().Name);
+        }
+
         public abstract bool Set<TValue>(TValue value, string propertyName = null);
         public abstract TValue Get<TValue>(TValue defaultValue, string propertyName = null);
 

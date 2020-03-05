@@ -66,7 +66,14 @@ namespace QuickPad.Mvc
 
         private void DocumentViewOnGainedFocus(RoutedEventArgs obj)
         {
-            if (!DataTransferManager.IsSupported()) return;
+            try
+            {
+                if (!DataTransferManager.IsSupported()) return;
+            }
+            catch
+            {
+                return;
+            }
 
             try
             {
@@ -109,7 +116,7 @@ namespace QuickPad.Mvc
             else
             {
                 request.Data.Properties.Title = $"{resourceLoader.GetString("Sharing")} {viewModel.File.DisplayName}";
-                request.Data.SetStorageItems(new []{viewModel.File});
+                request.Data.SetStorageItems(new[] { viewModel.File });
             }
 
             request.Data.Properties.FileTypes.Add(viewModel.CurrentFileType);

@@ -3,11 +3,12 @@ using QuickPad.Mvvm.ViewModels;
 using QuickPad.Mvvm.Views;
 using System;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using QuickPad.Mvvm.Managers;
 
 namespace QuickPad.Mvvm.Commands.Actions
 {
-    public class ShowGoToCommand<TStorageFile, TStream> : SimpleCommand<DocumentViewModel<TStorageFile, TStream>>, IShowGoToCommand<TStorageFile, TStream>
+    public class ShowGoToCommand<TStorageFile, TStream> : SimpleCommand<DocumentViewModel<TStorageFile, TStream>>, IShowGoToCommand<TStorageFile, TStream>, ICommand
         where TStream : class
     {
         public ShowGoToCommand(IServiceProvider provider)

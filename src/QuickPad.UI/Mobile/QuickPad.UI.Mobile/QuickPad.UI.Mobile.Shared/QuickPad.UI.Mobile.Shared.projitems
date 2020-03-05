@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6279c845-92f8-4333-ab99-3d213163593c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>QuickPad.UI</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CommandBar.xaml.cs">
+      <DependentUpon>CommandBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FindAndReplaceView.xaml.cs">
+      <DependentUpon>FindAndReplaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MenuBar.xaml.cs">
+      <DependentUpon>MenuBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Settings\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Settings\Advanced.xaml.cs">
+      <DependentUpon>Advanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Settings\Font.xaml.cs">
+      <DependentUpon>Font.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Settings\General.xaml.cs">
+      <DependentUpon>General.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Settings\SettingsNav.xaml.cs">
+      <DependentUpon>SettingsNav.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Settings\Theme.xaml.cs">
+      <DependentUpon>Theme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\StatusBar.xaml.cs">
+      <DependentUpon>StatusBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\TitleBar.xaml.cs">
+      <DependentUpon>TitleBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Converter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\AskForReviewDialog.xaml.cs">
+      <DependentUpon>AskForReviewDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\AskToSave.xaml.cs">
+      <DependentUpon>AskToSave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\GoToLine.xaml.cs">
+      <DependentUpon>GoToLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dialogs\WelcomeDialog.xaml.cs">
+      <DependentUpon>WelcomeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\IntCompare.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\QuickPadSettingsResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TextOptionsConverters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\Clipboard\ContentChangedCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\Clipboard\CopyCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\Clipboard\CutCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\Clipboard\DeleteCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\Clipboard\PasteCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\EmojiCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\RateAndReviewCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Commands\ShareCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Models\RtfDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mvvm\Models\TextDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextDocumentOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\DefaultTextForegroundColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\IVisualThemeSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\ThemeChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\ThemeChangedEventHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\VisualTheme.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\VisualThemeKind.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Theme\VisualThemeSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\CommandBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\FindAndReplaceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\MenuBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Settings\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Settings\Advanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Settings\Font.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Settings\General.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Settings\SettingsNav.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Settings\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\StatusBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\TitleBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\AskForReviewDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\AskToSave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\GoToLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Dialogs\WelcomeDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ResourceDictionaries\RichEditBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ResourceDictionaries\TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Templates\empty.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
